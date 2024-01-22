@@ -1,8 +1,4 @@
-
-from test_library import Multiplication
-
-# Instantiate a Multiplication object
-multiplication = Multiplication(2)
-
-# Call the multiply method
-print(multiplication.multiply(5))
+from test_library.myfunctions import analyze_sentiment
+input_text = "I love using Hugging Face Transformers library!"
+predicted_sentiment, confidence = analyze_sentiment(input_text)
+print(f"Sentiment: {predicted_sentiment}, Confidence: {confidence}")
