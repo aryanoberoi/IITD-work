@@ -8,17 +8,22 @@ from os import path
 # The directory containing this file
 HERE = path.abspath(path.dirname(__file__))
 
+# Get the long description from the README file
+with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 # This call to setup() does all the work
 setup(
-    name="cr_nlp",
-    version="0.1.4",
+    name="cr-nlp",
+    version="0.1.0",
     description="Demo library",
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     url="https://medium-multiply.readthedocs.io/",
     author="Joffrey Bienvenu",
     author_email="example@email.com",
     license="MIT",
-    long_description="not much",
+    long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     classifiers=[
         "Intended Audience :: Developers",
@@ -30,7 +35,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Operating System :: OS Independent"
     ],
-    packages=[""],
+    packages=["transformers"],
     include_package_data=True,
-    install_requires=["transformers","nltk"]
+    install_requires=["transformers"]
 )

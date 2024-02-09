@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cr_nlp
+Version: 0.1.4
+Summary: Demo library
+Home-page: https://medium-multiply.readthedocs.io/
+Author: Joffrey Bienvenu
+Author-email: example@email.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: transformers
+Requires-Dist: nltk
+
+not much

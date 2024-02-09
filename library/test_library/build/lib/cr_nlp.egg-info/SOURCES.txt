@@ -1,0 +1,9 @@
+__init__.py
+myfunctions.py
+setup.py
+test_myfunctions.py
+cr_nlp.egg-info/PKG-INFO
+cr_nlp.egg-info/SOURCES.txt
+cr_nlp.egg-info/dependency_links.txt
+cr_nlp.egg-info/requires.txt
+cr_nlp.egg-info/top_level.txt
