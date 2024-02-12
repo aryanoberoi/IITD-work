@@ -12,13 +12,13 @@ HERE = path.abspath(path.dirname(__file__))
 # This call to setup() does all the work
 setup(
     name="cr_nlp",
-    version="0.1.4",
-    description="Demo library",
-    url="https://medium-multiply.readthedocs.io/",
-    author="Joffrey Bienvenu",
-    author_email="example@email.com",
+    version="0.1.6",
+    description="Library for NLP tasks by Aryan Oberoi",
+    url="https://github.com/aryanoberoi/IITD-work/tree/main/library/test_library",
+    author="Aryan Oberoi",
+    author_email="aryanoberoi267@gmail.com",
     license="MIT",
-    long_description="not much",
+    long_description="Library for NLP tasks by Aryan Oberoi",
     long_description_content_type='text/markdown',
     classifiers=[
         "Intended Audience :: Developers",

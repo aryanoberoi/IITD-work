@@ -1,8 +1,7 @@
 from transformers import AutoTokenizer
 from transformers import pipeline
 import nltk
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
+
 
 def tokenize_text(text, model_name="bert-base-uncased"):
     """
@@ -66,6 +65,24 @@ def get_wordnet_pos(tag):
         return None
 
 def lemmatize_words(words):
+    """
+    Lemmatize a list of words.
+
+    This function takes a list of words, determines the part of speech for each word, 
+    and then lemmatizes it (converts it to its base or dictionary form) according 
+    to its part of speech. It utilizes the NLTK library's WordNetLemmatizer 
+    and the part-of-speech tagging to accurately lemmatize each word.
+
+    Parameters:
+    - words: A list of words (strings) that you want to lemmatize.
+
+    Returns:
+    - A list of lemmatized words.
+
+    Note: This function requires nltk's WordNetLemmatizer and pos_tag to be imported, 
+    along with the wordnet corpus and a function get_wordnet_pos(tag) that converts 
+    the part-of-speech tagging conventions between nltk and wordnet.
+    """
     lemmatizer = WordNetLemmatizer()
     lemmatized_words = []
     
@@ -79,21 +96,58 @@ def lemmatize_words(words):
         
     return lemmatized_words
 
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+
+def analyze_sentiment_vader(text):
+    nltk.download('vader_lexicon')
+    """
+    Analyzes the sentiment of a given text using VADER sentiment analysis.
+
+    Parameters:
+    - text: A string containing the text to analyze.
+
+    Returns:
+    - A dictionary containing the scores for negative, neutral, positive, and compound sentiments.
+    """
+    sid = SentimentIntensityAnalyzer()
+    sentiment_scores = sid.polarity_scores(text)
+    return sentiment_scores
+
 
 
 
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Download the necessary NLTK data (if not already done)
-nltk.download('punkt')
 
 def stem_words(words):
+    """
+    Stems a list of words.
+
+    This function applies the Porter Stemming algorithm to a list of words, 
+    reducing each word to its root or stem form. It's particularly useful in 
+    natural language processing and search applications where the exact form of 
+    a word is less important than its root meaning.
+
+    Parameters:
+    - words: A list of words (strings) to be stemmed.
+
+    Returns:
+    - A list containing the stemmed version of each input word.
+
+    Example:
+    >>> stem_words(["running", "jumps", "easily"])
+    ['run', 'jump', 'easili']
+    
+    Note: This function requires the nltk's PorterStemmer to be imported.
+    """
     # Initialize the Porter Stemmer
     stemmer = PorterStemmer()
     
     # Stem each word in the list
     stemmed_words = [stemmer.stem(word) for word in words]
     return stemmed_words
+
 
 

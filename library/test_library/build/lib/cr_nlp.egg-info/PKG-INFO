@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Name: cr_nlp
-Version: 0.1.4
-Summary: Demo library
-Home-page: https://medium-multiply.readthedocs.io/
-Author: Joffrey Bienvenu
-Author-email: example@email.com
+Version: 0.1.6
+Summary: Library for NLP tasks by Aryan Oberoi
+Home-page: https://github.com/aryanoberoi/IITD-work/tree/main/library/test_library
+Author: Aryan Oberoi
+Author-email: aryanoberoi267@gmail.com
 License: MIT
 Classifier: Intended Audience :: Developers
 Classifier: Programming Language :: Python
@@ -18,4 +18,4 @@ Description-Content-Type: text/markdown
 Requires-Dist: transformers
 Requires-Dist: nltk
 
-not much
+Library for NLP tasks by Aryan Oberoi
